@@ -1,0 +1,9 @@
+TOKEN "scheduled_copy_t_01838e19ea4c4f87a29fd943b9a03935" READ
+
+NODE pipe_node
+SQL >
+    SELECT * FROM ds
+
+TYPE COPY
+TARGET_DATASOURCE copy_pipe
+COPY_SCHEDULE 40 * * * *
